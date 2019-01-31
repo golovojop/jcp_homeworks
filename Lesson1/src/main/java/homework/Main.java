@@ -52,7 +52,8 @@ public class Main {
         alS.forEach(s -> System.out.println(s));
         alP.forEach(p -> System.out.println(p));
 
-        // Работаем с фруктами
+        // Работаем с фруктами.
+        // Создаем две коробки и взвешиваем.
         Box<Apple> appleBox1 = new Box<>(Apple.weight);
         appleBox1.putFruits(new Apple(), new Apple(), new Apple());
 
@@ -62,16 +63,17 @@ public class Main {
         System.out.println("\n\nFruits in boxes\n------------------");
         System.out.println("Apple box1 weight = " + appleBox1.getWeight());
         System.out.println("Orange box1 weight = " + orangeBox1.getWeight());
-
         System.out.println("Boxes weight is the same: " + appleBox1.compare(orangeBox1));
 
+        // Создаем ещё две коробки и заполняем из из первых двух
         Box<Apple> appleBox2 = new Box<>(Apple.weight);
-        appleBox1.replaceTo(appleBox2);
+        appleBox1.moveTo(appleBox2);
         System.out.println("Apple box1 weight = " + appleBox1.getWeight());
         System.out.println("Apple box2 weight = " + appleBox2.getWeight());
 
+        // Не компилируется
 //        Box<Orange> orangeBox2 = new Box<>(Orange.weight);
-//        appleBox2.replaceTo(orangeBox2);
+//        appleBox2.moveTo(orangeBox2);
 //        System.out.println("Apple box2 weight = " + appleBox2.getWeight());
 //        System.out.println("Orange box2 weight = " + orangeBox2.getWeight());
     }

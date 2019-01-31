@@ -12,27 +12,25 @@ import java.util.ArrayList;
 
 public class Box <T extends Fruit>  {
 
+    private float unitWeight;
+
     private ArrayList<Fruit> fruits = new ArrayList<>();
     private ArrayList<? super Fruit> fruitsIn = fruits;
     private ArrayList<? extends Fruit> fruitsOut = fruits;
-
-    private float unitWeight;
 
     public Box(float unitWeight) {
         this.unitWeight = unitWeight;
     }
 
+    // Добавить из массива
     public void putFruits(Fruit... fs) {
         for(Fruit f: fs)  fruitsIn.add(f);
     }
 
+    // Добавить из коллекции
     public void putFruits(ArrayList<? extends Fruit> al) {
         fruitsIn.addAll(al);
     }
-
-//    public <T extends Fruit> void putFruit(T fruit) {
-//        fruitsIn.add(fruit);
-//    }
 
     public float getWeight() {
         return fruits.size() * unitWeight;
@@ -42,7 +40,7 @@ public class Box <T extends Fruit>  {
         return this.getWeight() == anotherBox.getWeight();
     }
 
-    public void replaceTo(Box<T> anotherBox) {
+    public void moveTo(Box<T> anotherBox) {
         anotherBox.putFruits(fruitsOut);
         fruits.clear();
     }
