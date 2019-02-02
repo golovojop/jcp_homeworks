@@ -1,5 +1,5 @@
 package homework.stock.fruits;
 
 public abstract class Fruit {
-    public static float weight = 20;
+    public static float weight;
 }
