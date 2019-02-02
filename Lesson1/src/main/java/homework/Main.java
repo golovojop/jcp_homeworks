@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    // Тестовый класс
+    // Тестовый класс для работы с массивами
     static class Person {
         int id;
         String name;
@@ -18,7 +18,6 @@ public class Main {
             this.id = id;
             this.name = name;
         }
-
         public String toString() {
             return String.format("id = %d, name = %s", id, name);
         }
