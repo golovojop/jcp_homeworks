@@ -20,7 +20,7 @@ public class Box <T extends Fruit>  {
     }
 
     // Добавить из коллекции
-    public void putFruits(ArrayList<Fruit> al) {
+    private void putFruits(ArrayList<Fruit> al) {
         fruits.addAll(al);
     }
 
@@ -32,6 +32,7 @@ public class Box <T extends Fruit>  {
         return this.getWeight() == anotherBox.getWeight();
     }
 
+    // Коробка может содержать только один вид фруктов. Ограничение на тип.
     public void moveTo(Box<T> anotherBox) {
         anotherBox.putFruits(fruits);
         fruits.clear();
