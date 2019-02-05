@@ -48,8 +48,8 @@ public class Main {
         ArrayList<String> alS = ArrayUtils.array2list(strings);
         ArrayList<Person> alP = ArrayUtils.array2list(persons);
 
-        alS.forEach(s -> System.out.println(s));
-        alP.forEach(p -> System.out.println(p));
+        alS.forEach(System.out::println);
+        alP.forEach(System.out::println);
 
         // Работаем с фруктами.
         // Создаем две коробки и взвешиваем.
