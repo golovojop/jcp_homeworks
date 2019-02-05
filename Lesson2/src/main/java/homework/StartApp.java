@@ -4,15 +4,11 @@ import homework.dao.TableAdapter;
 
 public class StartApp {
 
-    String clearTable = "TRUNCATE TABLE products";
+    public static void main(String[] args) {
+        TableAdapter ta = new TableAdapter();
 
-    // !!! "IF EXISTS"
-    String deleteTable = "DROP TABLE IF EXISTS products";
-
-    TableAdapter ta = new TableAdapter();
-
-
-
-
-
+        long t = System.currentTimeMillis();
+        ta.addProducts(10000);
+        System.out.println("Elapsed time: " + (System.currentTimeMillis() - t) + " msec");
+    }
 }
