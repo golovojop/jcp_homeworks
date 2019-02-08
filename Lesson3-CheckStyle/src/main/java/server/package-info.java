@@ -1,4 +1,0 @@
-/**
- * Good package
- */
-package server;
