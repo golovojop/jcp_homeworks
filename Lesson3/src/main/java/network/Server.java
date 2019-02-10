@@ -11,7 +11,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server extends Thread {
-    public static final int PORT = 11100;
+    public static final int PORT = 11200;
     public static final String HOST = "127.0.0.1";
 
     ObjectOutputStream os = null;
